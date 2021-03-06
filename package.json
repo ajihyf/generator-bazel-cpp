@@ -1,6 +1,6 @@
 {
   "name": "generator-bazel-cpp",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A generator to generate C++ project using bazel.",
   "homepage": "https://github.com/ajihyf/generator-bazel-cpp",
   "author": {
