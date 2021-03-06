@@ -1,0 +1,7 @@
+local.bazelrc
+bazel-*
+.clangd
+
+
+node_modules/
+compile_commands.json

@@ -1,0 +1,10 @@
+build --copt=-fPIC
+build --copt=-Wall --copt=-Werror --copt=-Wextra --copt=-Wcast-qual --copt=-Wno-unused-parameter --copt=-Wwrite-strings
+build --cxxopt=-std=c++<%= cppStandard %>
+
+test --test_output=all --config=debug
+
+# https://github.com/bazelbuild/bazel/issues/6327#issuecomment-500125341
+common:debug -c dbg --spawn_strategy=standalone
+
+try-import %workspace%/local.bazelrc

@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "augustocdias.tasks-shell-input",
+    "vadimcn.vscode-lldb",
+    "matepek.vscode-catch2-test-adapter",
+    "llvm-vs-code-extensions.vscode-clangd"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+
+  "configurations": [
+    {
+      "name": "Debug Test",
+      "type": "lldb",
+      "request": "launch",
+      "initCommands": [
+        "settings set target.source-map ${input:execRoot} ${workspaceFolder}"
+      ],
+      "preLaunchTask": "Prepare Debug Tests",
+      "program": "${workspaceFolder}/bazel-bin/test/${fileBasenameNoExtension}"
+    }
+  ],
+
+  "inputs": [
+    {
+      "id": "execRoot",
+      "type": "command",
+      "command": "shellCommand.execute",
+      "args": {
+        "command": "bazel info execution_root",
+        "useFirstResult": true
+      }
+    }
+  ]
+}

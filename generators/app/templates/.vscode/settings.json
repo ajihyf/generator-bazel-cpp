@@ -1,0 +1,3 @@
+{
+  "testMate.cpp.test.executables": "bazel-bin/test/*{test,Test,TEST}*"
+}
