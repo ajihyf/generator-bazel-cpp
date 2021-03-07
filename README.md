@@ -23,7 +23,7 @@ yo bazel-cpp
 
 This project uses [bazel-compilation-database](https://github.com/grailbio/bazel-compilation-database) to generate `compile_commands.json`. [vscode-clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) is recommended for code completion and navigation.
 
-![edit](images/edit.png)
+![edit](https://github.com/ajihyf/generator-bazel-cpp/blob/master/images/edit.png?raw=true)
 
 Once project structure has been changed, run `./gencomp.sh` and restart clangd server in VSCode.
 
@@ -35,7 +35,7 @@ VSCode [Task Shell Input](https://marketplace.visualstudio.com/items?itemName=au
 
 `launch.json` has been configured to debug unit tests. To start debugging, just set breaking points and focus on your test file, click `Run Debug Test`.
 
-![debug launch](images/debug-launch.png)
+![debug launch](https://github.com/ajihyf/generator-bazel-cpp/blob/master/images/debug-launch.png?raw=true)
 
 ### Debug using TestMate
 
@@ -43,13 +43,13 @@ VSCode [C++ TestMate](https://marketplace.visualstudio.com/items?itemName=matepe
 
 This project has been configured to adapt the extension. To start running or debugging unit tests, build tests (with VSCode build task or in the terminal) first and then test suites will be shown in the test explorer.
 
-![run build](images/run-build.png)
+![run build](https://github.com/ajihyf/generator-bazel-cpp/blob/master/images/run-build.png?raw=true)
 
-![testmate](images/testmate.png)
+![testmate](https://github.com/ajihyf/generator-bazel-cpp/blob/master/images/testmate.png?raw=true)
 
 Happy debugging!
 
-![debug testmate](images/debug-testmate.png)
+![debug testmate](https://github.com/ajihyf/generator-bazel-cpp/blob/master/images/debug-testmate.png?raw=true)
 
 ## License
 
