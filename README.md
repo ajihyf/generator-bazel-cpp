@@ -37,7 +37,7 @@ VSCode [Task Shell Input](https://marketplace.visualstudio.com/items?itemName=au
 
 ![debug launch](images/debug-launch.png)
 
-## Debug using TestMate
+### Debug using TestMate
 
 VSCode [C++ TestMate](https://marketplace.visualstudio.com/items?itemName=matepek.vscode-catch2-test-adapter) is a great tool to run and debug C++ unit tests (including [Catch2](https://github.com/catchorg/Catch2), [GoogleTest](https://github.com/google/googletest)).
 
