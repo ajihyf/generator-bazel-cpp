@@ -24,6 +24,6 @@ cc_test(
     ],
     deps = [
         "//<%= title %>",
-        "@gtest//:gtest_main",
+<% if (test === 'gtest') { %>        "@gtest//:gtest_main",<% } else if(test === 'catch2') { %>        "@catch2//:catch2_with_main",<% } %>
     ],
 )

@@ -33,6 +33,24 @@ module.exports = class extends Generator {
         choices: [17, 14, 11],
         default: 17,
       },
+      {
+        type: 'list',
+        name: 'test',
+        message: 'Choose unit test framework',
+        choices: [
+          {
+            name: 'googletest (https://github.com/google/googletest)',
+            value: 'gtest',
+            short: 'googletest',
+          },
+          {
+            name: 'Catch2 (https://github.com/catchorg/Catch2)',
+            value: 'catch2',
+            short: 'Catch2',
+          },
+        ],
+        default: 'gtest',
+      },
     ]);
   }
 

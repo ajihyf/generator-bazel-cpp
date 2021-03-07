@@ -4,15 +4,18 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Prepare Debug Tests",
+      "label": "build",
       "type": "shell",
-      "command": "bazel build --config=debug //test"
+      "command": "bazel build --config=debug //test",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     },
     {
       "label": "test",
-      "command": "bazel test //test",
       "type": "shell",
-      "problemMatcher": [],
+      "command": "bazel test //test",
       "group": {
         "kind": "test",
         "isDefault": true

@@ -12,7 +12,7 @@
       "initCommands": [
         "settings set target.source-map ${input:execRoot} ${workspaceFolder}"
       ],
-      "preLaunchTask": "Prepare Debug Tests",
+      "preLaunchTask": "build",
       "program": "${workspaceFolder}/bazel-bin/test/${fileBasenameNoExtension}"
     }
   ],
