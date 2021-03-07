@@ -1,8 +1,10 @@
-# generator-bazel-cpp [![NPM version][npm-image]][npm-url] [![Build Status](https://www.travis-ci.com/ajihyf/generator-bazel-cpp.svg?branch=master)](https://www.travis-ci.com/ajihyf/generator-bazel-cpp) [![Dependency Status](https://david-dm.org/ajihyf/generator-bazel-cpp.svg)](https://david-dm.org/ajihyf/generator-bazel-cpp)
+# generator-bazel-cpp [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
 > A generator to generate C++ project using bazel.
 
 ## Installation
+
+> Ensure `bazel` exists in your system path. [bazelisk](https://github.com/bazelbuild/bazelisk) is recommended since it also manages bazel versions.
 
 First, install [Yeoman](http://yeoman.io) and generator-bazel-cpp using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
@@ -17,20 +19,45 @@ Then generate your new project:
 yo bazel-cpp
 ```
 
-## Getting To Know Yeoman
+## Development
 
-- Yeoman has a heart of gold.
-- Yeoman is a person with feelings and opinions, but is very easy to work with.
-- Yeoman can be too opinionated at times but is easily convinced not to be.
-- Feel free to [learn more about Yeoman](http://yeoman.io/).
+This project uses [bazel-compilation-database](https://github.com/grailbio/bazel-compilation-database) to generate `compile_commands.json`. [vscode-clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) is recommended for code completion and navigation.
+
+![edit](images/edit.png)
+
+Once project structure has been changed, run `./gencomp.sh` and restart clangd server in VSCode.
+
+## Debug
+
+VSCode [Task Shell Input](https://marketplace.visualstudio.com/items?itemName=augustocdias.tasks-shell-input) and [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) extensions are required to debug.
+
+### Debug using `launch.json`
+
+`launch.json` has been configured to debug unit tests. To start debugging, just set breaking points and focus on your test file, click `Run Debug Test`.
+
+![debug launch](images/debug-launch.png)
+
+## Debug using TestMate
+
+VSCode [C++ TestMate](https://marketplace.visualstudio.com/items?itemName=matepek.vscode-catch2-test-adapter) is a great tool to run and debug C++ unit tests (including [Catch2](https://github.com/catchorg/Catch2), [GoogleTest](https://github.com/google/googletest)).
+
+This project has been configured to adapt the extension. To start running or debugging unit tests, build tests (with VSCode build task or in the terminal) first and then test suites will be shown in the test explorer.
+
+![run build](images/run-build.png)
+
+![testmate](images/testmate.png)
+
+Happy debugging!
+
+![debug testmate](images/debug-testmate.png)
 
 ## License
 
-MIT © [ajihyf]()
+MIT © [ajihyf](ajihyf@gmail.com)
 
 [npm-image]: https://badge.fury.io/js/generator-bazel-cpp.svg
 [npm-url]: https://npmjs.org/package/generator-bazel-cpp
-[travis-image]: https://travis-ci.com//generator-bazel-cpp.svg?branch=master
-[travis-url]: https://travis-ci.com//generator-bazel-cpp
-[daviddm-image]: https://david-dm.org//generator-bazel-cpp.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org//generator-bazel-cpp
+[travis-image]: https://travis-ci.com/ajihyf/generator-bazel-cpp.svg?branch=master
+[travis-url]: https://travis-ci.com/ajihyf/generator-bazel-cpp
+[daviddm-image]: https://david-dm.org/ajihyf/generator-bazel-cpp.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/ajihyf/generator-bazel-cpp
