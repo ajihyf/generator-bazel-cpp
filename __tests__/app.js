@@ -16,7 +16,7 @@ describe('generator-bazel-cpp:app', () => {
       '.vscode/extensions.json',
       '.vscode/launch.json',
       '.vscode/settings.json',
-      '.vscode/tasks.json'
+      '.vscode/tasks.json',
     ]);
     assert.fileContent('.bazelversion', '3.7.2');
     assert.fileContent('.bazelrc', '-std=c++17');

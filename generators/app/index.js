@@ -10,7 +10,7 @@ module.exports = class extends Generator {
     this.option('skip-install', {
       type: Boolean,
       default: false,
-      description: 'whether to skip bazel install step'
+      description: 'whether to skip bazel install step',
     });
   }
 
@@ -24,15 +24,15 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'title',
-        message: 'Your project title'
+        message: 'Your project title',
       },
       {
         type: 'list',
         name: 'cppStandard',
         message: 'Project C++ Standard',
         choices: [17, 14, 11],
-        default: 17
-      }
+        default: 17,
+      },
     ]);
   }
 
@@ -46,7 +46,7 @@ module.exports = class extends Generator {
         this.templatePath('.clang-format'),
         this.templatePath('.gitignore'),
         this.templatePath('.bazelversion'),
-        this.templatePath('gencomp.sh')
+        this.templatePath('gencomp.sh'),
       ],
       this.destinationRoot(),
       ctx

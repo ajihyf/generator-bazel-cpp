@@ -1,4 +1,4 @@
-# generator-bazel-cpp [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-bazel-cpp [![NPM version][npm-image]][npm-url] [![Build Status](https://www.travis-ci.com/ajihyf/generator-bazel-cpp.svg?branch=master)](https://www.travis-ci.com/ajihyf/generator-bazel-cpp) [![Dependency Status](https://david-dm.org/ajihyf/generator-bazel-cpp.svg)](https://david-dm.org/ajihyf/generator-bazel-cpp)
 
 > A generator to generate C++ project using bazel.
 
